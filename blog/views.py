@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
+from .forms import PostForm
+from .models import Post
 # Create your views here.
 
-def home(request):
+
+#create view
+def create_view(request):
 
 
-    return render(request, 'blog/home.html')
+    return render(request, 'blog/create.html', {'form' : PostForm()})
